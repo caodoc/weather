@@ -1,6 +1,20 @@
 const info = document.getElementById("info");
 let ip = ""
 
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const apiUrl = 'https://api.ipify.org?format=json';
+
+fetch(proxyUrl + apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    // Handle the API response data
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('An error occurred while making the request:', error);
+  });
+
+
 fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data =>
