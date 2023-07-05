@@ -29,8 +29,8 @@ body
 {
     width: 350px;
     height: max-content;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
     background-color: #50577A;
     border-radius: 15px 15px 15px 15px;
 }
@@ -52,7 +52,35 @@ body
 	flex-direction: row;
 }
 
-#line
+#holder
 {
-	display: none;
+	display: flex;
+	gap: 10px;
+}
+
+input
+{
+	width: 250px;
+	height: 50px;
+	padding: 10px 10px 10px 10px;
+	border: none;
+	font-size: 20px;
+}
+
+input:focus
+{
+	outline: none;
+}
+
+button
+{
+	width: 60px;
+	height: 50px;
+	font-size: 20px;
+}
+
+#warning
+{
+	font-size: 18px;
+	font-weight: bold;
 }

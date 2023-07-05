@@ -22,6 +22,11 @@
         <div id="container">
             <div id="box">
                 <p id="header" align="center"> Your Weather </p>
+                <div id="holder">
+                    <input id="city_name" type="text" placeholder="City" required>
+                    <button id="submit"> Go </button>
+                </div>
+                <div id="warning"></div>
                 <p class="name"> Current: </p>
                 <ul>
                     <p> <li id="current_temperature"> Temperature: </li> </p>
@@ -32,7 +37,6 @@
                     <p> <li> Temperature: </li> </p>
                     <div id="box_temperature">
                         <text id="daily_max_temperature" align="left"> Max: </text>
-                        <br id="line">
                         <text id="daily_min_temperature" align="right"> Min: </text>
                     </div>
                     <p> <li id="sunrise"> Sunrise: </li> </p>
