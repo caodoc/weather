@@ -11,6 +11,8 @@ function WeatherCheck(city_name)
             const lat = data.coord.lat;
             const lng = data.coord.lon;
 
+            document.getElementById("current_description").innerHTML = `Description: ${data.weather[0].description}`;
+            
             //https://open-meteo.com/en/docs
             fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,windspeed_10m_max&current_weather=true&timezone=auto&forecast_days=1`)
             .then(response => response.json())
