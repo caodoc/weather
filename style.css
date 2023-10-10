@@ -1,0 +1,44 @@
+@import "/css/chloe.css";
+
+#city_name
+{
+    width: 200px;
+    height: 20px;
+}
+
+input
+{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #c0c0c0;
+    color: var(--fg);
+}
+
+input:focus
+{
+    outline: none;
+}
+
+#submit
+{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    color: var(--fg);
+    cursor: pointer;
+}
+
+#submit:hover
+{
+    background-color: var(--hover);
+    color: #ffffff;
+    box-shadow: none;
+}
+
+#submit:active
+{
+    box-shadow: 0px 0px 10px var(--hover);
+}

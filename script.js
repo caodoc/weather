@@ -22,20 +22,10 @@ function WeatherCheck(city_name)
 
                 const unit_temperature = "°C";
                 const unit_windspeed = "km/h";
-                var daytime = data.current_weather.time.toString();
-                daytime = daytime.slice(11, 13);
-                if (daytime >= 0 && daytime <= 18)
-                {
-                    document.getElementById("header").innerHTML = "Your Weather ☀️";
-                }
-                else
-                {
-                    document.getElementById("header").innerHTML = "Your Weather 🌙";
-                }
                 document.getElementById("current_temperature").innerHTML = `Tempature: ${data.current_weather.temperature}${unit_temperature}`;
                 document.getElementById("current_windspeed").innerHTML = `Wind Speed: ${data.current_weather.windspeed}${unit_windspeed}`;
-                document.getElementById("daily_max_temperature").innerHTML = `Max: ${data.daily.temperature_2m_max}${unit_temperature}`;
-                document.getElementById("daily_min_temperature").innerHTML = `Min: ${data.daily.temperature_2m_min}${unit_temperature}`;
+                document.getElementById("daily_max_temperature").innerHTML = `${data.daily.temperature_2m_max}${unit_temperature}`;
+                document.getElementById("daily_min_temperature").innerHTML = ` - ${data.daily.temperature_2m_min}${unit_temperature}`;
                 var time_sunrise = data.daily.sunrise.toString();
                 document.getElementById("sunrise").innerHTML = `Sunrise: ${time_sunrise.slice(11)}a.m.`;
                 var time_sunset = data.daily.sunset.toString();
@@ -63,7 +53,7 @@ function InputCheck(city_name)
 {
     if (city_name === "")
     {
-        document.getElementById("warning").innerHTML = "Please give city's name!";
+        document.getElementById("warning").innerHTML = "Please give a city name!";
     }
     else if (check !== city_name)
     {
@@ -72,7 +62,7 @@ function InputCheck(city_name)
     }
     else if (check === city_name)
     {
-        document.getElementById("warning").innerHTML = "Already checked!";
+        document.getElementById("warning").innerHTML = "This city has already been checked!";
     }
 }
 
