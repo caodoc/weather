@@ -1,44 +1,61 @@
-@import "/css/chloe.css";
+/* Color Scheme: https://github.com/catppuccin/catppuccin */
 
-#city_name
+:root
 {
-    width: 200px;
-    height: 20px;
+	--body: #11111b;
+	--link: #fab387;
+	--text: #89dceb;
+	--scroll-bar: #585b70;
 }
 
-input
+*
 {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #c0c0c0;
-    color: var(--fg);
+	box-sizing: border-box;
 }
 
-input:focus
+*::-webkit-scrollbar
 {
-    outline: none;
+	background-color: transparent;
+	width: 15px;
 }
 
-#submit
+*::-webkit-scrollbar-track
 {
-    padding: 10px 20px;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    text-decoration: none;
-    color: var(--fg);
-    cursor: pointer;
+	background-color: transparent;
 }
 
-#submit:hover
+*::-webkit-scrollbar-thumb
 {
-    background-color: var(--hover);
-    color: #ffffff;
-    box-shadow: none;
+	border-radius: 20px;
+	border: 4px solid transparent;
+	background-color: var(--scroll-bar);
+	background-clip: content-box;
 }
 
-#submit:active
+body
 {
-    box-shadow: 0px 0px 10px var(--hover);
+	margin: 0;
+	top: 0;
+	overflow-x: hidden;
+	background-color: var(--body);
+	font-family: "Fira Mono", monospace;
+}
+
+#container
+{
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+	display: flex;
+    justify-content: center;
+    font-size: 24px;
+	color: var(--text);
+	user-select: none;
+}
+
+#link
+{
+    color: var(--link);
 }
